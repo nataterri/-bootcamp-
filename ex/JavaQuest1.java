@@ -15,13 +15,13 @@ public class JavaQuest1 {
 
     // subtraction
     int subtract = second - first; 
-    System.out.println("The subtraction reuslt is " + subtract);
+    System.out.println("The subtraction result is " + subtract);
 
     // another sum
     byte b1 = 60;
     byte b2 = 70;
     sum = b1 + b2;
-    System.out.println("The another sum reuslt is " + sum);
+    System.out.println("The another sum result is " + sum);
 
     // declare two boolean variable with true and false value
     boolean varB = false;
@@ -37,12 +37,12 @@ public class JavaQuest1 {
     System.out.println("The variable fnumber is " + fnumber);
     System.out.println("The variable dnumber is " + dnumber);
 
-    // Find reminder. Declare variable a & reminder
+    // Find remainder. Declare variable a & remainder
     int a = 7;
     int b = 3;
     // Fix it
-    int reminder = a % b; 
-    System.out.println("The variable reminder is " + reminder);
+    int remainder = a % b; 
+    System.out.println("The variable reminder is " + remainder);
 
     // declare a variable x and assign value to it.
     int e = 7;
