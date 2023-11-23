@@ -2,7 +2,7 @@ public class DemoString {
   public static void main(String[] args) {
     String emailAddress = "nata.terri@gmail.com";
     // String s = 3; // s is declared by String, so you cannot assign int value 
-    int i = "hello"; // i is declared by int, you cannot assign String value
+    String i = "hello"; // i is declared by int, you cannot assign String value
 
     System.out.println(emailAddress); // nata.terri@gmail.com
 

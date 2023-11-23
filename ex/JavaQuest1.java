@@ -42,7 +42,7 @@ public class JavaQuest1 {
     int b = 3;
     // Fix it
     int remainder = a % b; 
-    System.out.println("The variable reminder is " + remainder);
+    System.out.println("The variable remainder is " + remainder);
 
     // declare a variable x and assign value to it.
     int e = 7;
