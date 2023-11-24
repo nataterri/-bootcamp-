@@ -108,16 +108,41 @@ public class DemoForLoop {
         // Sum up all odd numbers from 0 (0-100) before the sum reaching 200
         // Final, the sum must be <= 200
         // The loop should be ended at which number of i?
-        sum = 0;
+        // System.out.println("i=" + i + ",sum" + sum);
+        int m = 0;
+        int num = 0;
         for (int i = 0; i < 101; i++) {
-        if (i % 2 == 0);
-            continue;
-            if (i <= 200) {
+            // skip even numberr
+            if (i % 2 == 0) {
+                continue;
+            }
+            // add up odd numbers
+            m += i;
+            // check if sum > 200, if yes, exit loop
+            if (m > 200) {
+                m -= i;
                 break;
-                sum += i;
+            }
+            num = i;
+        }
+        System.out.println("i=" + m + ",sum" + num);
+
+        String str = "abc pol ijk def xyz";
+        char target = 'f';
+        int n = 0;
+        boolean isFound = false;
+        for (int i = 0; i < str.length(); i++) { // charAt(i)
+            if (str.charAt(i) == target) {
+                n = i + 1;
+                isFound = true;
+                break; 
             }
         }
-        System.out.println("i=" + i + ",sum" + sum);
-
+        if (isFound) { // found == true
+            System.out.println("Found" + target + n + "the character");
+        } else {
+            System.out.println("Not found");
+        }
     }
+
 }

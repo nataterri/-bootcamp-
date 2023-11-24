@@ -1,6 +1,6 @@
 public class DemoOperator {
 
- public static void main (String[] args) {
+  public static void main(String[] args) {
 
     int x = 2;
     x++;
@@ -81,56 +81,56 @@ public class DemoOperator {
       System.out.println("example 5=no");
     }
 
-    //Example 6 -AND OR
+    // Example 6 -AND OR
     if (h.charAt(3) == 'e' || b == 6) {
-     //h.charAt(3) -> 'l'
-     //b == 6 -> true
-     //false || true
-     //true
-     System.out.println("example =6yes");
+      // h.charAt(3) -> 'l'
+      // b == 6 -> true
+      // false || true
+      // true
+      System.out.println("example =6yes");
 
     }
 
-    //20231122 14:00
-    //Comparsion oerators NOT only exists in if statemnts
-    //boolean -> && ||
+    // 20231122 14:00
+    // Comparsion oerators NOT only exists in if statemnts
+    // boolean -> && ||
     boolean b1 = true && false;
-    System.out.println("b1=" + b1);//false
+    System.out.println("b1=" + b1);// false
 
     boolean b2 = false;
     boolean b3 = true;
 
-    boolean result = b2|| b3;
-    System.out.println("Result="+ result);//true
+    boolean result = b2 || b3;
+    System.out.println("Result=" + result);// true
 
     boolean result2 = b2 || b3 && b1;
     System.out.println("result2=" + result2);// false
 
 
-    if(b1 == false){ // !b1
-      System.out.println("example 7=b1 is false"); //print
+    if (b1 == false) { // !b1
+      System.out.println("example 7=b1 is false"); // print
     }
 
-    if(!b1){// b1 == false
-      System.out.println("example 7=b1 is false"); //print
+    if (!b1) {// b1 == false
+      System.out.println("example 7=b1 is false"); // print
 
     }
 
-    if(b1 == true) { // b1
-     System.out.println("example 8=b1 is true"); // not print
+    if (b1 == true) { // b1
+      System.out.println("example 8=b1 is true"); // not print
     }
 
-    if(b1){// b1 == true
+    if (b1) {// b1 == true
       System.out.println("example 8=b1 is true"); // not print
     }
 
     int g = 0;
-    if (b1 ==false){
-      g =10; //
+    if (b1 == false) {
+      g = 10; //
     }
 
     int k = b1 == false ? 10 : 0;
-    System.out.println("k=" +k);
+    System.out.println("k=" + k);
     // if b1 is false, assign 10 to k, otherwise 0
 
     int a1 = 10;
@@ -169,29 +169,30 @@ public class DemoOperator {
     }
     totalAmount = itemTotal + transportationFee;
 
-    System.out.println("Total Amount" + totalAmount); //2277.33
-    
+    System.out.println("Total Amount" + totalAmount); // 2277.33
+
     // >, <, >=, !
     boolean isPassed = false;
-    if (!isPassed) { //== false
+    if (!isPassed) { // == false
       System.out.println("isPassed is false");
     }
     isPassed = true; // re-assignment
     if (isPassed) { // == true
-    System.out.println("isPassed is true");
- 
-    String str = "www.apple.com";
-    if (str.length() < 10 || "apple".equals(str)) {
-    System.out.println("length < 10 or www.apple.com");
+      System.out.println("isPassed is true");
 
-    String s = " " ; // empty string, length = 0
-    System.out.println(); // 0
-    s += "hello";
-    if (!s.isEmpty()) {
-    System.out.println("s is not empty");
+      String str = "www.apple.com";
+      if (str.length() < 10 || "apple".equals(str)) {
+        System.out.println("length < 10 or www.apple.com");
+
+        String s = " "; // empty string, length = 0
+        System.out.println(); // 0
+        s += "hello";
+        if (!s.isEmpty()) {
+          System.out.println("s is not empty");
+        }
+
+      }
+
+    }
   }
-
-}
-
- }
 }
