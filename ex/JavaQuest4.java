@@ -16,7 +16,7 @@ public class JavaQuest4 {
       }
       if (i % 2 == 0 && i % 3 == 0 && i > 0) {
         num++;
-        System.out.println(i);
+        System.out.println("i=" + i);
       }
 
 
