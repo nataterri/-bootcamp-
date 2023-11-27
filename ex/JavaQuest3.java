@@ -17,11 +17,11 @@ public class JavaQuest3 {
     int number_Of_DaysInMonth = 0;
     String MonthOfName = "Unknown";
 
-    System.out.print("12");
-    int month = input.nextInt();
+    int month = 2;
+    System.out.println();
 
-    System.out.print("2014");
-    int year = input.nextInt();
+    int year = 2016;
+    System.out.println();
 
     // Complete the switch statement
     switch (month) {
