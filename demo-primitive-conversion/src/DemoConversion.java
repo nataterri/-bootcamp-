@@ -16,6 +16,7 @@ public class DemoConversion {
 
         short s3 = 130;
         byte b2 = (byte) s3; // overflow -> from -128 to 127
+        // count from -128 then -127 then -126
         System.out.println("b2=" + b2); // -126
 
         int i2 = 130;
@@ -36,8 +37,8 @@ public class DemoConversion {
         int i3 = 'a'; // 97, upcast
         int i4 = 65610; // 65610 - 65535
         char c3 = (char) i4; // downcast
-        System.out.println("c3 (int)=" + (int) c3);
-        System.out.println("c3 (char)=" + c3);
+        System.out.println("c3 (int)=" + (int) c3); // 74
+        System.out.println("c3 (char)=" + c3); // J
 
 
     }

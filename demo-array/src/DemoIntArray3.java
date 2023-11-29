@@ -63,6 +63,52 @@ public class DemoIntArray3 {
       }
     }
     System.out.println(Arrays.toString(arr4));
+
+    String s = "abcabcabcabcabc";
+    char[] arr5 = new char[s.length()];
+
+    // Approach 1
+    for (int i = 0; i < s.length(); i++) {
+      arr5[i] = s.charAt(i);
+    }
+    // Approach 2
+    char[] arr6 = s.toCharArray(); //
+
+    // replace a -> c (String)
+    // "abcabcabcabcabc"
+    // "cbccbccbccbccbc"
+    char[] arr7 = new char[s.length()];
+    for (int i = 0; i < s.length(); i++) {
+      if (s.charAt(i) == 'a') {
+        arr7[i] = 'c';
+        continue;
+      }
+      arr7[i] = s.charAt(i);
+    }
+    // From array to String
+    System.out.println(String.valueOf(arr7));
+
+
+    String str = "hello";
+    str = new String("hello");
+    str = String.valueOf("hello");
+
+    System.out.println(String.valueOf(1));
+    System.out.println(String.valueOf(1.0d));
+    System.out.println(String.valueOf(1.0f));
+    System.out.println(String.valueOf(1L));
+    System.out.println(String.valueOf(new char[] {'a', 'b'})); // ab
+    // System.out.println(String.valueOf(new int[] {1, 2, 3})); NOT OK
+
+    // Replace (String method)
+    String str4 = "abcabcabcabcabc";
+    String result4 = str4.replace('a', 'c'); // replace a by c
+    System.out.println("str4=" + str4); // result4=abcabcabcabcabc
+    System.out.println("result4=" + result4); // result4 =cbccbccbccbccbc
+
+    // Replace a pattern "ab" by "ij"
+    System.out.println(str4.replace("ab", "ij")); // ijcijcijcijcijc
+
   }
 }
 
