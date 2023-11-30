@@ -23,35 +23,41 @@ public class JavaQuest8 {
     }
     System.out.println("Second Max=" + secondMax);
 
+    int max2 = 0;
+    int secondMax2 = 0;
     for (int i = 0; i < nums2.length; i++) {
-      if (nums2[i] > max) {
-        secondMax = max;
-        max = nums2[i];
-      } else if (nums2[i] > secondMax) {
-        secondMax = nums2[i];
+      if (nums2[i] > max2) {
+        secondMax2 = max2;
+        max2 = nums2[i];
+      } else if (nums2[i] > secondMax2) {
+        secondMax2 = nums2[i];
       }
     }
-    System.out.println("Second Max=" + secondMax);
+    System.out.println("Second Max=" + secondMax2);
 
+    int max3 = 0;
+    int secondMax3 = 0;
     for (int i = 0; i < nums3.length; i++) {
-      if (nums3[i] > max) {
-        secondMax = max;
-        max = nums3[i];
-      } else if (nums3[i] > secondMax) {
-        secondMax = nums3[i];
+      if (nums3[i] > max3) {
+        secondMax3 = max3;
+        max3 = nums3[i];
+      } else if (nums3[i] > secondMax3) {
+        secondMax3 = nums3[i];
       }
     }
-    System.out.println("Second Max=" + secondMax);
+    System.out.println("Second Max=" + secondMax3);
 
+    int max4 = 0;
+    int secondMax4 = 0;
     for (int i = 0; i < nums4.length; i++) {
-      if (nums4[i] > max) {
-        secondMax = max;
-        max = nums4[i];
-      } else if (nums4[i] > secondMax) {
-        secondMax = nums4[i];
+      if (nums4[i] > max4) {
+        secondMax4 = max4;
+        max4 = nums4[i];
+      } else if (nums4[i] > secondMax4) {
+        secondMax4 = nums4[i];
       }
     }
-    System.out.println("Second Max=" + secondMax);
+    System.out.println("Second Max=" + secondMax4);
 
   }
 }
