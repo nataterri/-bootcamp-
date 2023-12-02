@@ -46,6 +46,8 @@ public class DemoWrapper {
         Long l2 = (long) (int) i10; // long -> Long (autobox)
 
 
+        // do not write if ( d2 > d1) { // double > double
+        // instead write if (d2 compareTo(d1) == 0) // double == double
 
     }
 }
