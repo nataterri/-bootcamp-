@@ -32,9 +32,6 @@ public class DemoIntArray {
         // char[]
         // boolean[]
         // String[]
-        long[] arr5 = new long[10];
-        byte[] arr6 = new byte[20];
-        short[] arr7 = new short[30];
 
         System.out.println(arr2.length); // 5
 
@@ -58,10 +55,10 @@ public class DemoIntArray {
             // [2] -> 3
         }
 
-        for (int i = arr8.length - 1 ; i >= 0; i--) {
+        for (int i = arr8.length - 1; i >= 0; i--) {
             // 3 2 1
             if (i > 0) {
-            System.out.println(" "); // "3 2 1"
+                System.out.println(" "); // "3 2 1"
             }
         }
 
