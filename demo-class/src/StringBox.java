@@ -5,7 +5,7 @@ public class StringBox { // Person
   public StringBox(String str) {
     this.characters = new char[str.length()];
     for (int i = 0; i < str.length(); i++) {
-      characters[i] = str.chartAt(i);
+      characters[i] = str.charAt(i);
     }
   }
 
@@ -20,7 +20,7 @@ public class StringBox { // Person
     return this.characters.length;
   }
 
-  public StringBox.concat(String str) {
+  public StringBox concat(String str) {
     //
     int idx = 0;
     char[] newArr = new char[this.characters.length + str.length()];
@@ -34,7 +34,7 @@ public class StringBox { // Person
   }
 
   // Similar to Stringbuilder append()
-  public StringBox concat(String str) {
+  public StringBox concat2(String str) {
     //
     int idx = 0;
     char[] newArr = new char[this.characters.length + str.length()];
@@ -62,23 +62,16 @@ public class StringBox { // Person
   }
 
   public static void main(String[] args) {
-    StringBox string = new StringBox("hello");
-    System.out.println(String.toString); // hello
+    StringBox s = new StringBox("hello");
+    System.out.println(s.toString()); // hello
 
-    string = string.concat("world");
-
-    String x = "hello";
-    String y = x.concat("world"); // new String ("hello world")
-
-    StringBox2 s2 = s.concat("world");
+    StringBox s2 = s.concat("world");
     System.out.println("s2=" + s2.toString()); // helloworld
     System.out.println("s=" + s.toString()); // hello
 
-    StringBox3 s3 = s.concat("world");
+    StringBox s3 = s.concat2("world");
     System.out.println("s3=" + s3.toString()); // helloworld
     System.out.println("s=" + s.toString()); // helloworld
-
-
 
   }
 

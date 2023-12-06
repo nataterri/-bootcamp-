@@ -7,7 +7,7 @@ public class Person {
 
   private int age; // 0
 
-  // Constructor (Produce Person's object)
+  // Empty Constructor (Produce Person's object)
   public Person() {
 
   }
@@ -28,6 +28,7 @@ public class Person {
   }
 
   // Instance Method (Object method)
+  // Belongs to the object
   // Setter
   public void setLastName(String lastName) {
     this.lastName = lastName;
@@ -70,6 +71,25 @@ public class Person {
 
   }
 
+  public static void swimming() {
+    System.out.println(" I'm swimming"); // cannot use object data
+  }
+
+  public void swim() { // void method can be with or without "return"
+    int a = 1;
+    if (a > 2)
+      return;
+    System.out.println(this.firstName + " is swimming.");
+  }
+
+  public int eat() { // int method has to be with "return"
+    int b = 10;
+    if (b > 12) {
+      return 100;
+    }
+    return -1;
+  }
+
   public static void main(String[] args) {
     Person p1 = new Person();
     p1.setFirstName("John");
@@ -96,8 +116,14 @@ public class Person {
     // "Chris Chan"
     // substring()
 
-    System.out.println();
+    // Static vs Instance Method
+    // Call Instance Method
+    Person p6 = new Person("Jenny");
+    p6.setLastName("Chan");
+    p6.swim(); // Jenny is swimming
 
+    // Call Static Method
+    Person.swimming(); // I'm swimming
 
   }
 }

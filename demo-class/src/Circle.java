@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class Circle {
 
   private double radius; //
@@ -6,21 +8,24 @@ public class Circle {
   public Circle() {
 
   }
+
   // Argument Constructor
   public Circle(double radius) {
     this.radius = radius;
   }
+
   // Getter - Instance method
   public double getRadius() {
     return this.radius;
   }
+
   // Setter - Instance method
   public void setRadius(double x) {
     this.radius = this.radius + x;
   }
 
   // Instance method
-  public double diameter() { 
+  public double diameter() {
     return this.radius * 2; // double * int
   }
 
@@ -31,4 +36,11 @@ public class Circle {
     return Math.pow(this.radius, 2) * Math.PI;
   }
 
+  // Static Method
+  public static double area(double radius) {
+    // return radius * radius * Math.PI;
+    return BigDecimal.valueOf(radius).multiply(BigDecimal.valueOf(radius))
+        .multiply(BigDecimal.valueOf(Math.PI)).doubleValue();
+
+  }
 }
