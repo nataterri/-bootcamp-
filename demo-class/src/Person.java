@@ -22,13 +22,22 @@ public class Person {
   }
 
   public Person(String lastName, String firstName, int age) {
-    this.lastName = lastName;
-    this.firstName = firstName;
+    // this.lastName = lastName;
+    // this.firstName = firstName;
+    this(lastName, firstName);
     this.age = age;
   }
 
+  // Instance Method 
+  // 1. Belongs to the object (Person p1 = new Person(); p1.swim())
+  // 2. Able to control the instance variable by "this"
+
+  // Static Method
+  // 1. Belongs to the class (ClassName.staticMethod() -> Person.swim(3))
+  // 2. Not able to read / write instance variable
+  // 3. The return value completely derived by the input parameters
+
   // Instance Method (Object method)
-  // Belongs to the object
   // Setter
   public void setLastName(String lastName) {
     this.lastName = lastName;
