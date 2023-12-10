@@ -13,7 +13,7 @@ public class Library {
 
   public Library(Librarian librarian) {
     this.books = new Book[0];
-    Librarian.librarian = librarian;
+    Library.librarian = librarian;
   }
 
   public String librarianName() {
@@ -31,15 +31,19 @@ public class Library {
   }
 
   public static void main(String[] args) {
-    Librarian librarian = new librarian("Jenny");
-    Library library = new Library();
+
+    Librarian librarian = new Librarian("Jenny");
+    Library library = new Library(librarian);
     library.addBook(new Book());
     System.out.println(library.bookCount()); // 1
     library.addBook(new Book());
     library.addBook(new Book());
     System.out.println(library.bookCount()); // 3
 
+    Librarian librarian2 = new Librarian("Tommy");
+    Library library2 = new Library(librarian2);
 
+    System.out.println(library.librarianName()); // Tommy
+    System.out.println(library2.librarianName()); // Tommy
   }
-
 }

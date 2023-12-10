@@ -1,8 +1,11 @@
-package day10;
+// package day10;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 /*
- * Expected Output : 
- * Example 1. 33% , The percentage of characters in s that equal the letter 'o' is 2 / 6 * 100% = 33% when rounded down, so we return 33.
- * Example 2. 0% , The percentage of characters in s that equal the letter 'k' is 0%, so we return 0.
+ * Expected Output : Example 1. 33% , The percentage of characters in s that equal the letter 'o' is 2 / 6 * 100% = 33% when rounded down, so we return 33. Example 2. 0% , The percentage of characters
+ * in s that equal the letter 'k' is 0%, so we return 0.
  */
 public class JavaQuest15 {
   // Question :
@@ -28,6 +31,17 @@ public class JavaQuest15 {
 
   public static int percentageLetter(String s, char letter) {
     // code here
+    int count = 0;
+    for (int i = 0; i < s.length(); i++) {
+      if (s.charAt(i) == letter) {
+        count++;
+      }
+    }
+    
+    int percentage = BigDecimal.valueOf(count)
+        .divide(BigDecimal.valueOf(s.length()), 2, RoundingMode.HALF_UP)
+        .multiply(BigDecimal.valueOf(100)).intValue();
+    return percentage;
 
   }
 }
