@@ -4,7 +4,7 @@ public class Database {
 
   private static String[] strings = new String[0]; // strings is Class Data
 
-  // instatnce (final vs non-final)
+  // instance (final vs non-final)
   // int number; -> Setter
   // final int number = 3; -> No setter
 
