@@ -57,9 +57,9 @@ public class Swimming {
         System.out.println();
 
         if (isCompetitiveSwimmer) {
-            System.out.println("Swimmer is a competitive swimmer.");
+            System.out.println(swimmerName + "is a competitive swimmer.");
         } else {
-            System.out.println("Swimmer is not a competitive swimmer.");
+            System.out.println(swimmerName + "is not a competitive swimmer.");
         }
     }
 
@@ -69,7 +69,7 @@ public class Swimming {
         swimmer1.swim();
         // Natasha is swimming.
         // Favorite strokes: freestyle breastroke
-        // Swimmer is a competitive swimmer.
+        // Natasha is a competitive swimmer.
         swimmer1.setSwimmerAge(30);
         System.out.println(swimmer1.getSwimmerAge()); // 30
     }
