@@ -17,7 +17,7 @@ public class DemoString {
 
     String str4 = new String("hello");
     System.out.println(str1.equals(str4)); // true
-    System.out.println(str1 == str3); // false, "new" force creating an object
+    System.out.println(str1 == str4); // false, "new" force creating an object
 
     String str5 = String.valueOf("hello");
     System.out.println(str1.equals(str5)); // true

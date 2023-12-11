@@ -1,17 +1,21 @@
-public class Cat extends Animal {
+public class Animal { // "Animal" is an abstract word
+  
+  private int age;
 
-    // Cat Class inherit all public attributes, methods
-    // Cat did NOT inherit constructor
+  public Animal() {
+    
+  }
 
-    public Cat() {
-        // super(); // implicity call Animal() constructor
-    }
+  public Animal(int age) {
+    this.age = age;
+  }
 
-    public static void main(String[] args) {
-        Cat cat = new Cat(); // Create a Cat object -> Cat() -> call Animal()
-        cat.setAge(2);
-        System.out.println(cat.getAge()); // 2
+  public int getAge() {
+    return this.age;
+  }
 
-    }
+  public void setAge(int age) {
+    this.age = age;
+  }
 
 }
