@@ -1,4 +1,4 @@
-public class Animal { // "Animal" is an abstract word
+public abstract class Animal { // "Animal" is an abstract word
   
   private int age;
 

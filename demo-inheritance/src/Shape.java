@@ -32,15 +32,18 @@ public abstract class Shape {
   public static double totalArea(Shape[] shapes) {
     BigDecimal total = BigDecimal.valueOf(0);
     for (Shape shape : shapes) {
-      total = total.add(BigDecimal.valueOf(shape.area()));
+      total = total.add(BigDecimal.valueOf(shape.area())); 
+      // shape.area() -> runtime -> which object (circle/ square) -> different implementation of area()
     }
     return total.doubleValue();
   }
 
   public static void main(String[] args) {
+    String s = "hello"; // hello is a string object, s is a String type object reference
+
     Shape s1 = new Circle(3.2d, "Yellow"); // Polymorhism
     // Java Compile Time: s1 has area(), getColor()
-
+    
     System.out.println("s1 area=" + s1.area());
     System.out.println("s1 color=" + s1.getColor());
     // System.out.println("s1 radius=" + s1.getRadius());
@@ -51,6 +54,9 @@ public abstract class Shape {
     System.out.println("c1 area=" + c1.area());
     System.out.println("c1 color=" + c1.getColor());
     System.out.println("c1 radius=" + c1.getRadius());
+
+    Shape[] shapes = new Shape[] {new Circle(4.2), new Square(9)};
+    System.out.println(totalArea(shapes)); // 136.41769440932396
   }
 
 }
