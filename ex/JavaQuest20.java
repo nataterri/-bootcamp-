@@ -20,7 +20,7 @@ public class JavaQuest20 {
     if (s.length() != goal.length()) {
       return false;
     }
-    String concatenated = s + s;
-    return concatenated.contains(goal);
+    String concat = s + s;
+    return concat.contains(goal);
   }
 }

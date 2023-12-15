@@ -25,13 +25,11 @@ public class JavaQuest22 {
     int product = 1;
     int sum = 0;
 
-    while (n > 0) {
-      int digit = n % 10;
-      product *= digit;
-      sum += digit;
-      n /= 10;
+    char[] chr = String.valueOf(n).toCharArray();
+    for (int i = 0; i < chr.length; i++) {
+      product *= (int) chr[i] - 48;
+      sum += (int) chr[i] - 48;
     }
-
     return product - sum;
   }
 }

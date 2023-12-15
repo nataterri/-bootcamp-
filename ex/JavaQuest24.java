@@ -20,9 +20,8 @@ public class JavaQuest24 {
   public static int absolute(int[] nums, int target) {
     int count = 0;
     for (int i = 0; i < nums.length; i++) {
-      for (int j = i + 1; j < nums.length; j++) {
-        int absoluteDiff = Math.abs(nums[i] - nums[j]);
-        if (absoluteDiff == target) {
+      for (int j = 0; j < nums.length; j++) {
+        if (i != j && j > i && Math.abs(nums[i] - nums[j]) == target) {
           count++;
         }
       }

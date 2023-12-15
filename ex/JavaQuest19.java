@@ -21,8 +21,8 @@ public class JavaQuest19 {
     // "ModelY"
     // print the expected output
     System.out.println("Car Year=" + myCar.carYear + ", Car Model=" + myCar.carModel);
-    Map<Integer, String> hmap = new HashMap<>();
-    hmap.put(null, null);
-    System.out.println(hmap);
+    // Map<Integer, String> hmap = new HashMap<>();
+    // hmap.put(null, null);
+    // System.out.println(hmap);
   }
 }
