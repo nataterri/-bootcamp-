@@ -1,20 +1,13 @@
 /*
-
-Question : Given an integer number n, 
-return the difference between the product of its digits and the sum of its digits.
- 
-Constraints :
-1 <= n <= 10^5
-
-Example :
-
-Input: n = 4568
-Output: 937
-Explanation: 
-Product of digits = 4 * 5 * 6 * 8 = 960 
-Sum of digits = 4 + 5 + 6 + 8 = 23
-Result = 960 - 23 = 937
-*/
+ * 
+ * Question : Given an integer number n, return the difference between the product of its digits and the sum of its digits.
+ * 
+ * Constraints : 1 <= n <= 10^5
+ * 
+ * Example :
+ * 
+ * Input: n = 4568 Output: 937 Explanation: Product of digits = 4 * 5 * 6 * 8 = 960 Sum of digits = 4 + 5 + 6 + 8 = 23 Result = 960 - 23 = 937
+ */
 
 public class JavaQuest22 {
   public static void main(String[] args) {
@@ -29,5 +22,16 @@ public class JavaQuest22 {
 
   public static int findDifferent(int n) {
     // code here
+    int product = 1;
+    int sum = 0;
+
+    while (n > 0) {
+      int digit = n % 10;
+      product *= digit;
+      sum += digit;
+      n /= 10;
+    }
+
+    return product - sum;
   }
 }

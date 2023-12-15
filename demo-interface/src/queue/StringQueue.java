@@ -1,3 +1,4 @@
+package queue;
 public class StringQueue implements Addable, Pollable { // Class Signature
 
   private String[] queue;

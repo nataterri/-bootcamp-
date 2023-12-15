@@ -1,5 +1,6 @@
+package bank;
 public class AccountHolder {
-  
+
   private String name;
 
   private int age;
@@ -7,6 +8,6 @@ public class AccountHolder {
   public AccountHolder(String name, int age) {
     this.name = name;
     this.age = age;
-
   }
+
 }
