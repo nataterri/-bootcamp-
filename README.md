@@ -38,3 +38,33 @@ N/A
 - Integer Cache
 - Stack & Heap memory (object)
 - Scanner, random
+
+## Week 3
+- Instance Method
+
+a. Belongs to the object (Person p1 = new Person(); p1.swim();)
+b. Able to control the instance variable by "this"
+
+- Static Method
+
+a. Belongs to the class (ClassName.staticMethod() -> Person.swim(3))
+b. Not able to read/write instance variable
+c. The return value completely derived by the input parameters
+
+## Week 4
+- extends
+Parent class (Normal Class and Abstract Class). Their Difference
+Make sure you know the limitations of using "extends"
+pros and cons
+- implements
+Interface (100% abstract)
+Make sure you can create, modify, understand impact between class and interface
+pros and cons
+- Object.class (Parent) & Polymorphism
+Object Reference Type vs Object Type
+What if "Object Reference Type" is a parent of "Object Type"?
+What if "Object Type" is a parent of "Object Reference Type"?
+Object obj = new ChildClass(); (What are the implications?)
+equals() & hashCode()
+- Objects.equals(...)
+- Objects.hash(...)

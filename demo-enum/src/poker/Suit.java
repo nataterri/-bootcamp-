@@ -1,9 +1,10 @@
 package poker;
 
-public class Suit {
-  DIAMOND, //
-  CLUB, //
-  HEART, //
-  SPADE, //
-  ;
+public enum Suit {
+
+    CLUB,
+    DIAMOND,
+    HEART,
+    SPADE,
+    ;
 }
