@@ -1,9 +1,9 @@
-public class Currency {
+public enum Currency {
 
   HKD(1, "Hong Kong Dollar"), //
   USD(2, "US Dollar"), //
   CNY(3, "RMB"), //
-  JPY(4, "Japan") //
+  JPY(4, "Japan"), //
   ;
 
   private int dbValue;
@@ -16,6 +16,13 @@ public class Currency {
 
   public static Currency fromDbValue(int dbValue) {
     // values()
+    for (Currency currency : Currency.values()) {
+      if (currency.dbValue == dbValue) {
+        return currency;
+      }
+    }
+    return null;
   }
-  
+
+
 }
