@@ -68,3 +68,13 @@ Object obj = new ChildClass(); (What are the implications?)
 equals() & hashCode()
 - Objects.equals(...)
 - Objects.hash(...)
+
+## Week 5
+- DS
+- List - ArrayList, LinkedList
+- Queue - LinkedList, ArrayDeque
+- Set - HashSet
+- Map - HashMap
+- Stack, PriorityQueue (less important)
+- Hash DS (equals() & hashCode())
+- Comparator & Comparable (Interface Control on method parameter - Collections.sort())
