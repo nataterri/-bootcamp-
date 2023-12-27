@@ -13,8 +13,6 @@ public class Printer<T extends Number> { // T is part of class defintion, and it
     this.values = new ArrayList<>(List.of(value));
   }
 
-  
-
   public void add(T value) {
     values.add(value);
   }
@@ -26,7 +24,7 @@ public class Printer<T extends Number> { // T is part of class defintion, and it
   public double sum() {
     double sum = 0;
     for (T t : this.values) {
-      sum += (double) t;
+      sum += (double) t; // T -> Wrapper Class -> (double) -> bug
     }
     return sum;
   }

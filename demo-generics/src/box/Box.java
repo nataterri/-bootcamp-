@@ -1,6 +1,7 @@
 package box;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Box<T> {
@@ -82,6 +83,8 @@ public class Box<T> {
 
     s = new Shape();
     System.out.println(s.area()); // -1
+
+    Collections.sort(null);
   }
 
 }
