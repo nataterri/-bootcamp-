@@ -5,7 +5,7 @@ public class DemoCheckedException {
 
     // 1a) Sign the unchecked exception in the method signature
     // isEmailValid("xxxxxxxx@gmail.com"); // method caller -> compile error
-    // The method caller still need to handle the unchecked exception even the method throws already.
+    // The method caller still need to handle the unchecked exception even the method throws alreay.
 
     // 1b) try-catch to handle
     try {
@@ -20,8 +20,7 @@ public class DemoCheckedException {
       throws BusinessException {
     if (emailaddr == null || emailaddr.length() > 10)
       // return false;
-      throw new BusinessException(
-          "emailaddr is too long. the length should be <= 100");
+      throw new BusinessException(SysCode.EMAIL_TOO_LONG);
     return true;
   }
 
@@ -31,6 +30,6 @@ public class DemoCheckedException {
       return true;
     if (emailaddr == null || emailaddr.length() < 8)
       return false;
-    throw new BusinessException("");
+    throw new BusinessException(SysCode.EMAIL_TOO_LONG);
   }
 }

@@ -4,7 +4,9 @@ public class DemoUncheckedException {
 
   public static void main(String[] args) {
     // Unchecked Exception (Run-time exception)
-    // It is not required to handle exception thrown in the method
+    // 1. It is not required to handle an unchecked exception thrown in the method
+    
+
     double result;
     // Example 1: int / int
     try {
@@ -12,12 +14,12 @@ public class DemoUncheckedException {
       result = divide(10, 0);
       System.out.println("after");
     } catch (ArithmeticException e) {
-      System.out.println("ArithemtaicException");
+      System.out.println("ArithmeticException");
       result = 0.0d;
     }
     System.out.println("result=" + result);
 
-    divide(3, 0); //can call divide (int, int) without handling the run-time exception
+    divide(3, 0); // I can still call divide(int, int) without handling the run-time exception
 
     // Example 2: double / double -> 10.0 / 0.0 -> infinite
     try {
@@ -28,24 +30,23 @@ public class DemoUncheckedException {
       }
       System.out.println("after");
     } catch (ArithmeticException e) {
-      System.out.println("ArithemtaicException");
+      System.out.println("ArithmeticException");
       result = 0.0d;
     }
     System.out.println("result=" + result);
   }
 
-
-  public static double divide(int x, int y) throws ArithmeticException { //
+  public static double divide(int x, int y) throws ArithmeticException { // 
     return x / y; // Potentially run-time exception - ArithmeticException
   }
 
   public static double divide(double x, double y) {
-    return x / y; // 0.0 -> infinite
+    return x / y; // / 0.0 -> infinite
   }
 
   public boolean deposit(double amount) {
     if (amount <= 0.0d)
-    throw new IllegalArgumentException();
+      throw new IllegalArgumentException();
     this.balance += amount;
     return true;
   }
