@@ -1,5 +1,4 @@
 @FunctionalInterface
 public interface Calculable {
-  int computer(int x, int y);
-  
+  int compute(int x, int y);
 }
