@@ -18,10 +18,14 @@ public class Demo {
     // 5. if there is only one statement inside the code block, don't need to add {} and return;
     // 6. Don't need to specify the input parameter types
     Walkable person2 = () -> {
-      System.out.println("hello");
+      System.out.println("I am a person and walking ...");
       System.out.println("hello world");
     };
     person2.walk();
+
+    // What we learned in Week 3
+    Walkable person3 = new Person();
+    person3.walk();
 
     // (salary, bonus), refers to the compute(int x, int y) in the interface Calculable
     // Approach 1 to handle one code statement

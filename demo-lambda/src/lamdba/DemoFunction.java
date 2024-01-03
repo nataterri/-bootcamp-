@@ -25,9 +25,8 @@ public class DemoFunction {
     concatHello.apply("abc"); // abchello
 
     // R apply(T t, U u);
-    BiFunction<List<String>, Integer, String> getByIndex = (strings, index) -> {
-      return strings.get(index);
-    };
+    BiFunction<List<String>, Integer, String> getByIndex =
+        (strings, index) -> strings.get(index);
 
     getByIndex.apply(new ArrayList<>(List.of("abc", "def", "ijk")), 1); // def
 
@@ -51,6 +50,8 @@ public class DemoFunction {
     System.out.println(dicMap.get("Peter")); // hello
 
     System.out.println(dicMap.size()); // 2 (John, Peter)
+
+
 
   }
 
