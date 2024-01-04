@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Customer {
 
-  List<Address> addresses;
+  private List<Address> addresses;
 
   public Customer() {
     addresses = new ArrayList<>();
@@ -31,6 +31,13 @@ public class Customer {
       System.out.println(addresses);
     }
 
+    @Override
+    public String toString() {
+      return "Address(" //
+          + "line1=" + this.line1 //
+          + ", line2=" + this.line2 //
+          + ")";
+    }
   }
 
   public static void main(String[] args) {
