@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class DemoStream {
   public static void main(String[] args) throws Exception {
@@ -176,6 +177,46 @@ public class DemoStream {
         .collect(Collectors.partitioningBy(cat -> cat.getAge() >= 10));
 
     System.out.println(catMap);
+
+    // for-each
+    int x = 100;
+    for (Cat cat : cats) {
+      System.out.println(x);
+      x = 10;
+    }
+
+    int m = 0;
+    cats.stream() //
+        .forEach(e -> {
+          System.out.println(e.getAge());
+          // System.out.println(x); // error, No read operation on the variable outside the stream.
+          // x = 10; // error, NO write operation on the variable outside the stream.
+        });
+
+    // sum up all cats' age
+    sum = cats.stream() //
+        .mapToInt(e -> e.getAge()) //
+        .sum();
+    System.out.println(sum);
+
+    Stream<Cat> sc = Stream.of(new Cat("ABC", 9), new Cat("IJK", 10));
+    List<Cat> reuslt11 =
+        sc.filter(e -> e.getAge() >= 10).collect(Collectors.toList());
+
+
+    Cat cat = null;
+    Stream<Cat> sc2 = Stream.ofNullable(cat); // new ArrayList<>().stream()
+    sc2.forEach(e -> {
+      System.out.println("hello");
+    });
+
+    // Stream<Cat> sc4 = Stream.of(null);
+    // error, you cannot pass null value into Stream.of() directly
+
+    Stream<Cat> sc3 = Stream.empty(); // similar to Stream.ofNullable(null);
+
+    // generate, iternate
+
 
   }
 
