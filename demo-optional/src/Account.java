@@ -1,8 +1,15 @@
+import java.util.Optional;
+
 public class Account {
 
   private double balance;
 
   private int accountNo;
+
+  // Important Note:
+  // Optional<T> is not suitable for Class attribute use.
+  // Optional<T> does not support serialization/ deserialization natually
+  // private Optional<String> currency;
   
   public Account(int accountNo, double balance) {
     this.accountNo = accountNo;

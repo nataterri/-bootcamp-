@@ -1,5 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.OptionalDouble;
 
 public class DemoOptional {
   public static void main(String[] args) {
@@ -24,8 +28,40 @@ public class DemoOptional {
     if (oa.isPresent()) {
       oa.get().credit(1000.0d);
     } else {
-      System.out.println("I decided to do nothing when Account Object is null.");
+      System.out
+          .println("I decided to do nothing when Account Object is null.");
     }
+
+    List<Account> accounts =
+        new ArrayList<>(List.of(new Account(1, 120.0d), new Account(2, 50.0d)));
+
+    Optional<Account> optaccount = accounts.stream() //
+        .filter(e -> e.getBalance() > 30.0d) //
+        .findFirst();
+
+    // ifPresent(Consumer)
+    // isPresent -> boolean
+
+    Optional<Account> optaccount2 = accounts.stream() //
+        .filter(e -> e.getBalance() > 150.0d) //
+        .findAny();
+
+    Account acct = optaccount2.orElse(new Account(99, 0.1d));
+
+    Account acct2 = optaccount2.orElseGet(() -> new Account(99, 0.1d));
+
+    Account acct3 = optaccount2.orElseThrow(() -> new NoSuchElementException());
+
+    OptionalDouble maxBalance = accounts.stream() //
+        .mapToDouble(e -> e.getBalance()) //
+        .max();
+
+    double max = 0.0d;
+    if (maxBalance.isPresent()) {
+      max = maxBalance.getAsDouble();
+    }
+
+    max = maxBalance.orElse(-1.0d);
 
   }
 
@@ -40,4 +76,15 @@ public class DemoOptional {
       return Optional.empty();
     return Optional.of(new Account(accountNo, balance));
   }
-}
+
+  // Important Note: We never use Optional<T> as input parameter's type.
+  // Inside the method, we still need to perform null check on Optional<T>,
+  // So we can't see any benefit in using Optional<T> in input parameter.
+
+  // public static Optional<Account> setup3(Optional<Integer> accountNo, Optional<Double> balance) {
+  // if (accountNo == null)
+  // return Optional.empty();
+  // if(accountNo.isPresent()) { // nullpointerexception
+
+  // }
+  // }
