@@ -76,6 +76,7 @@ public class DemoOptional {
       return Optional.empty();
     return Optional.of(new Account(accountNo, balance));
   }
+}
 
   // Important Note: We never use Optional<T> as input parameter's type.
   // Inside the method, we still need to perform null check on Optional<T>,
