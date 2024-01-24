@@ -1,3 +1,5 @@
+import lomboks.Person;
+
 public class Demo {
   public static void main(String[] args) {
     // Inner Class

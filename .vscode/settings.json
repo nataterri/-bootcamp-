@@ -1,3 +1,11 @@
 {
-  "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.project.sourcePaths": [
+    "demo-recursion/src",
+    "demo-lambda/src",
+    "demo-enum/src",
+    "demo-array/src",
+    "bootcamp-demo-junit/src/main/lomboks",
+    "bootcamp-demo-junit/src/main/java/com/vtxlab/bootcamp/lomboks"
+  ]
 }
